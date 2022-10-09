@@ -46,7 +46,8 @@ public class GameApp extends GameApplication {
 
         gameSettings.setFullScreenAllowed(false);
         gameSettings.setFullScreenFromStart(false);
-
+        gameSettings.setCloseConfirmation(true);
+        gameSettings.setClickFeedbackEnabled(true);
         gameSettings.setIntroEnabled(false);
         gameSettings.setGameMenuEnabled(true);
         gameSettings.setMainMenuEnabled(true);
