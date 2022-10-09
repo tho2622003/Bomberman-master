@@ -16,7 +16,9 @@ import com.almasb.fxgl.app.scene.Viewport;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.PhysicsWorld;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.util.HashMap;
@@ -36,6 +38,7 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initSettings(GameSettings gameSettings) {
+        gameSettings.setAppIcon("icon.png");
         gameSettings.setWidth(SCENE_WIDTH);
         gameSettings.setHeight(SCENE_HEIGHT);
         gameSettings.setTitle(GAME_TITLE);
@@ -309,7 +312,6 @@ public class GameApp extends GameApplication {
 
         setLevel();
     }
-
 
     public static void main(String[] args) {
         launch(args);
