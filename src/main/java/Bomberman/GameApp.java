@@ -2,6 +2,7 @@ package Bomberman;
 
 import Bomberman.Components.Enemy.*;
 import Bomberman.Components.FlameComponent;
+import Bomberman.Components.PlayerComponent;
 import Bomberman.Menu.GameMenu;
 import Bomberman.Menu.MainMenu;
 import Bomberman.UI.EndingScene;
@@ -15,16 +16,15 @@ import com.almasb.fxgl.app.scene.Viewport;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.PhysicsWorld;
-import Bomberman.Components.PlayerComponent;
 import javafx.scene.input.KeyCode;
 import javafx.util.Duration;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static Bomberman.Components.PlayerComponent.*;
+import static Bomberman.Components.PlayerComponent.PlayerSkin;
 import static Bomberman.Constants.Constant.*;
-import static Bomberman.DynamicEntityState.State.*;
+import static Bomberman.DynamicEntityState.State.DIE;
 import static Bomberman.GameType.*;
 import static Bomberman.Sounds.SoundEffect.*;
 import static com.almasb.fxgl.dsl.FXGL.*;

@@ -24,7 +24,15 @@ public class GameMenu extends FXGLMenu {
         shape.setOpacity(0.5);
 
         ImageView background = new ImageView();
-        background.setImage(new Image("assets/textures/esc_background.png"));
+
+        if (getRandomNumberPause(1, 3) == 1) {
+            background.setImage(new Image("assets/textures/esc_background.png"));
+        }
+        else if (getRandomNumberPause(1, 3) == 2) {
+            background.setImage(new Image("assets/textures/esc_background2.png"));
+        }
+        else background.setImage(new Image("assets/textures/esc_background3.png"));
+
         background.setX(160);
         background.setY(90);
         background.setEffect(new DropShadow(5, 3.5, 3.5, Color.WHITE));
@@ -49,13 +57,13 @@ public class GameMenu extends FXGLMenu {
         var menuBox = new VBox(
                 new MenuButton("Resume", 52, () -> fireResume()),
                 new MenuButton("Mute/unmute", 22, () -> setSoundSwitch()),
-                new MenuButton("Return to menu", 22, () -> fireExitToMainMenu()),
+                new MenuButton("Return to Menu", 22, () -> fireExitToMainMenu()),
                 new MenuButton("Exit", 22, () -> fireExit())
         );
 
         menuBox.setAlignment(Pos.CENTER_LEFT);
         menuBox.setTranslateX(getAppWidth() / 2.0 - 110);
-        menuBox.setTranslateY(getAppHeight() / 2.0);
+        menuBox.setTranslateY(getAppHeight() / 2.0 - 20);
         menuBox.setSpacing(0);
 
         getContentRoot().getChildren().addAll(shape, background, title, version, menuBox);

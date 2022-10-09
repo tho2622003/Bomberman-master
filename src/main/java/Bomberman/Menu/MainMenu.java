@@ -51,14 +51,14 @@ public class MainMenu extends FXGLMenu {
 
         var menuBox = new VBox(
                 new MenuButton("New Game", 60, () -> newGame()),
-                new MenuButton("How to play", 30, () -> instruct()),
+                new MenuButton("How to Play", 30, () -> instruct()),
                 new MenuButton("Mute/unmute", 30, () -> setSoundSwitch()),
                 new MenuButton("Exit", 30, () -> fireExit())
         );
 
         menuBox.setAlignment(Pos.CENTER_LEFT);
         menuBox.setTranslateX(getAppWidth() * 0.35);
-        menuBox.setTranslateY(getAppHeight() / 2.0);
+        menuBox.setTranslateY(getAppHeight() / 2.0 - 20);
         menuBox.setSpacing(0);
 
         getContentRoot().getChildren().addAll(background, title, version, menuBox);
@@ -69,7 +69,7 @@ public class MainMenu extends FXGLMenu {
 
         pane.addRow(0, getUIFactoryService().newText(" Movement      "),
                 new HBox(new KeyView(W), new KeyView(S), new KeyView(A), new KeyView(D)));
-        pane.addRow(1, getUIFactoryService().newText(" Placed Bomb      "),
+        pane.addRow(1, getUIFactoryService().newText(" Place Bomb      "),
                 new KeyView(SPACE));
 
         getDialogService().showBox("How to Play", pane, getUIFactoryService().newButton("OK"));

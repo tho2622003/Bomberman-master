@@ -1,6 +1,6 @@
 23:47:51.496 [main                     ] DEBUG Logger               - Configured Logger
 23:47:51.498 [main                     ] DEBUG GameApplication      - Logging settings
-Title: SPLATMAN
+Title: SPLATTMAN
 Version: 1.0
 Width: 1280
 Height: 720
@@ -204,7 +204,7 @@ Scene Factory: class Bomberman.GameApp$1
 23:47:55.617 [FXGL Background Thread 3 ] DEBUG Engine               - stageStyle: DECORATED
 23:47:55.617 [FXGL Background Thread 3 ] DEBUG Engine               - supportedLanguages: [ENGLISH, FRENCH, GERMAN, HUNGARIAN, RUSSIAN]
 23:47:55.617 [FXGL Background Thread 3 ] DEBUG Engine               - ticksPerSecond: -1
-23:47:55.617 [FXGL Background Thread 3 ] DEBUG Engine               - title: SPLATMAN
+23:47:55.617 [FXGL Background Thread 3 ] DEBUG Engine               - title: SPLATTMAN
 23:47:55.617 [FXGL Background Thread 3 ] DEBUG Engine               - urlGithub: https://github.com/AlmasB/FXGL
 23:47:55.617 [FXGL Background Thread 3 ] DEBUG Engine               - urlLeaderboard: http://fxgl-top.herokuapp.com/
 23:47:55.617 [FXGL Background Thread 3 ] DEBUG Engine               - urlPOM: https://raw.githubusercontent.com/AlmasB/FXGL/release/README.md
