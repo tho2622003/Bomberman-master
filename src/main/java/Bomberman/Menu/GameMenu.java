@@ -49,15 +49,15 @@ public class GameMenu extends FXGLMenu {
 
         var menuBox = new VBox(
                 new MenuButton("Resume", 20, () -> fireResume()),
-                new MenuButton("Sound", 20, () -> setSoundSwitch()),
+                new MenuButton("Mute/unmute sound", 20, () -> setSoundSwitch()),
                 new MenuButton("Menu", 20, () -> fireExitToMainMenu()),
                 new MenuButton("Exit", 20, () -> fireExit())
         );
 
         menuBox.setAlignment(Pos.CENTER_LEFT);
         menuBox.setTranslateX(getAppWidth() / 2.0 - 110);
-        menuBox.setTranslateY(getAppHeight() / 2.0 + 50);
-        menuBox.setSpacing(20);
+        menuBox.setTranslateY(getAppHeight() / 2.0 + 20);
+        menuBox.setSpacing(1);
 
         getContentRoot().getChildren().addAll(shape, background, title, version, menuBox);
     }
