@@ -3,7 +3,6 @@ package Bomberman.Menu;
 import com.almasb.fxgl.app.scene.FXGLMenu;
 import com.almasb.fxgl.app.scene.MenuType;
 import javafx.geometry.Pos;
-import javafx.scene.effect.Bloom;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Lighting;
 import javafx.scene.image.Image;
@@ -48,18 +47,22 @@ public class GameMenu extends FXGLMenu {
         centerTextBind(version, 800, 280);
 
         var menuBox = new VBox(
-                new MenuButton("Resume", 20, () -> fireResume()),
-                new MenuButton("Mute/unmute sound", 20, () -> setSoundSwitch()),
-                new MenuButton("Menu", 20, () -> fireExitToMainMenu()),
-                new MenuButton("Exit", 20, () -> fireExit())
+                new MenuButton("Resume", 52, () -> fireResume()),
+                new MenuButton("Mute/unmute", 22, () -> setSoundSwitch()),
+                new MenuButton("Return to menu", 22, () -> fireExitToMainMenu()),
+                new MenuButton("Exit", 22, () -> fireExit())
         );
 
         menuBox.setAlignment(Pos.CENTER_LEFT);
         menuBox.setTranslateX(getAppWidth() / 2.0 - 110);
-        menuBox.setTranslateY(getAppHeight() / 2.0 + 20);
-        menuBox.setSpacing(1);
+        menuBox.setTranslateY(getAppHeight() / 2.0);
+        menuBox.setSpacing(0);
 
         getContentRoot().getChildren().addAll(shape, background, title, version, menuBox);
+    }
+
+    public int getRandomNumberPause(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
     }
 
 }

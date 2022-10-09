@@ -24,7 +24,14 @@ public class MainMenu extends FXGLMenu {
     public MainMenu() {
         super(MenuType.MAIN_MENU);
         ImageView background = new ImageView();
-        background.setImage(new Image("assets/textures/main_background.png"));
+
+        if (getRandomNumberMain(1, 3) == 1) {
+            background.setImage(new Image("assets/textures/main_background.png"));
+        }
+        else if (getRandomNumberMain(1, 3) == 2) {
+            background.setImage(new Image("assets/textures/main_background2.png"));
+        }
+        else background.setImage(new Image("assets/textures/main_background3.png"));
 
         DropShadow dropShadow = new DropShadow();
         dropShadow.setColor(Color.rgb(185, 19, 21));
@@ -43,16 +50,16 @@ public class MainMenu extends FXGLMenu {
         centerTextBind(version, 860, 250);
 
         var menuBox = new VBox(
-                new MenuButton("New Game", 27, () -> newGame()),
-                new MenuButton("Control", 27, () -> instruct()),
-                new MenuButton("Mute/unmute sound", 27, () -> setSoundSwitch()),
-                new MenuButton("Exit", 27, () -> fireExit())
+                new MenuButton("New Game", 60, () -> newGame()),
+                new MenuButton("How to play", 30, () -> instruct()),
+                new MenuButton("Mute/unmute", 30, () -> setSoundSwitch()),
+                new MenuButton("Exit", 30, () -> fireExit())
         );
 
         menuBox.setAlignment(Pos.CENTER_LEFT);
         menuBox.setTranslateX(getAppWidth() * 0.35);
-        menuBox.setTranslateY(getAppHeight() / 2.0 + 20);
-        menuBox.setSpacing(1);
+        menuBox.setTranslateY(getAppHeight() / 2.0);
+        menuBox.setSpacing(0);
 
         getContentRoot().getChildren().addAll(background, title, version, menuBox);
     }
@@ -75,5 +82,9 @@ public class MainMenu extends FXGLMenu {
             turnOffMusic();
             getSceneService().pushSubScene(new StageStartScene());
         }, Duration.millis(10));
+    }
+
+    public int getRandomNumberMain(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
     }
 }
