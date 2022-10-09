@@ -251,7 +251,7 @@ public class GameApp extends GameApplication {
         UIComponents.addILabelUI("flame", "🔥 %d", 560, 25);
         UIComponents.addILabelUI("speed", "👟  %d", 670, 25);
         UIComponents.addILabelUI("bomb", "💣 %d", 840, 25);
-        UIComponents.addILabelUI("enemies", "👻 %d", 1010, 25);
+        UIComponents.addILabelUI("enemies", "🐙 %d", 1010, 25);
         UIComponents.addDLabelUI("levelTime", "⏰ %.0f", 1140, 25);
     }
 
