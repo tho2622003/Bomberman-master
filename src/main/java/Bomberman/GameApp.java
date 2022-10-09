@@ -214,7 +214,7 @@ public class GameApp extends GameApplication {
     @Override
     protected void onPreInit() {
         unmute();
-        loopBGM("stage_theme.mp3");
+        loopBGM("main_theme.mp3");
     }
 
     @Override
@@ -269,7 +269,7 @@ public class GameApp extends GameApplication {
                     setLevel();
                 } else {
                     turnOffMusic();
-                    getSceneService().pushSubScene(new EndingScene("   GAME OVER !!!\n\n\n\n   DO YOUR BEST"));
+                    getSceneService().pushSubScene(new EndingScene("   GAME OVER !!!\n\n   YOU DID YOUR BEST"));
                 }
             });
         }, Duration.seconds(2.2));
@@ -294,7 +294,7 @@ public class GameApp extends GameApplication {
     private void nextLevel() {
         if (geti("level") == MAX_LEVEL) {
             turnOffMusic();
-            getSceneService().pushSubScene(new EndingScene("CONGRATULATIONS !!!\n\n\n\n    GOOD BYE"));
+            getSceneService().pushSubScene(new EndingScene("CONGRATULATIONS !!!\n\n    YOU BEAT THE GAME"));
             return;
         }
         inc("level", +1);

@@ -12,7 +12,7 @@ public class UIComponents {
     public static void addILabelUI(String varName, String title, double x, double y) {
         Label text = new Label();
         text.setTextFill(Color.BLACK);
-        text.setFont(Font.font("Showcard Gothic", UI_FONT_SIZE));
+        text.setFont(Font.font("Splatfont 2", UI_FONT_SIZE));
         text.textProperty().bind(getip(varName).asString(title));
         addUINode(text, x, y);
     }
@@ -20,7 +20,7 @@ public class UIComponents {
     public static void addDLabelUI(String varName, String title, double x, double y) {
         Label text = new Label();
         text.setTextFill(Color.BLACK);
-        text.setFont(Font.font("Showcard Gothic", UI_FONT_SIZE));
+        text.setFont(Font.font("Splatfont 2", UI_FONT_SIZE));
         text.textProperty().bind(getdp(varName).asString(title));
         addUINode(text, x, y);
     }

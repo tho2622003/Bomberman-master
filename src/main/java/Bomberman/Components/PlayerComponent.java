@@ -208,7 +208,7 @@ public class PlayerComponent extends Component {
             getGameTimer().runOnceAfter(() -> {
                 if (!bombInvalidation) {
                     bomb.getComponent(BombComponent.class).explode(flames);
-                    play("explosion.wav");
+                    play("bomb_explode.wav");
                 } else {
                     bomb.removeFromWorld();
                 }
