@@ -41,8 +41,8 @@ public class GameApp extends GameApplication {
         gameSettings.setTitle(GAME_TITLE);
         gameSettings.setVersion(GAME_VERSION);
 
-        gameSettings.setFullScreenAllowed(true);
-        gameSettings.setFullScreenFromStart(true);
+        gameSettings.setFullScreenAllowed(false);
+        gameSettings.setFullScreenFromStart(false);
 
         gameSettings.setIntroEnabled(false);
         gameSettings.setGameMenuEnabled(true);
@@ -225,7 +225,7 @@ public class GameApp extends GameApplication {
         inc("levelTime", -tpf);
 
         if (getd("levelTime") <= 0.0) {
-            showMessage("Time Up !!!");
+            showMessage("Time is up!");
             onPlayerDied();
             set("levelTime", TIME_LEVEL);
         }
@@ -248,11 +248,11 @@ public class GameApp extends GameApplication {
         UIComponents.addILabelUI("level", "🚩 %d", 35, 25);
         UIComponents.addILabelUI("life", "💜 %d", 160, 25);
         UIComponents.addILabelUI("score", "💵  %d", 300, 25);
-        UIComponents.addILabelUI("flame", "🔥 %d", 560, 25);
-        UIComponents.addILabelUI("speed", "👟  %d", 670, 25);
-        UIComponents.addILabelUI("bomb", "💣 %d", 840, 25);
-        UIComponents.addILabelUI("enemies", "🐙 %d", 1010, 25);
-        UIComponents.addDLabelUI("levelTime", "⏰ %.0f", 1140, 25);
+        UIComponents.addILabelUI("flame", "🔥 %d", 460, 25);
+        UIComponents.addILabelUI("speed", "👟  %d", 570, 25);
+        UIComponents.addILabelUI("bomb", "💣 %d", 740, 25);
+        UIComponents.addILabelUI("enemies", "🐙 %d", 870, 25);
+        UIComponents.addDLabelUI("levelTime", "Time: %.0f", 1040, 25);
     }
 
     public void onPlayerDied() {
