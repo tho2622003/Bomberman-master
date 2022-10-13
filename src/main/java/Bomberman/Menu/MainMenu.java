@@ -67,7 +67,7 @@ public class MainMenu extends FXGLMenu {
         GridPane pane = new GridPane();
 
         pane.addRow(0, getUIFactoryService().newText(" Movement      "),
-                new HBox(new KeyView(W), new KeyView(S), new KeyView(A), new KeyView(D)));
+                new HBox(new KeyView(W),  new KeyView(S), new KeyView(A), new KeyView(D)));
         pane.addRow(1, getUIFactoryService().newText(" Place Bomb      "),
                 new KeyView(SPACE));
 

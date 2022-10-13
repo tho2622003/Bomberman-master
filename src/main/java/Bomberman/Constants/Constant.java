@@ -1,7 +1,7 @@
 package Bomberman.Constants;
 
 public class Constant {
-    public static final int SCENE_WIDTH = 1280;
+    public static final int SCENE_WIDTH = 1295;
     public static final int SCENE_HEIGHT = 720;
     public static final int GAME_WORLD_WIDTH = 1488;
     public static final int GAME_WORLD_HEIGHT = 720;

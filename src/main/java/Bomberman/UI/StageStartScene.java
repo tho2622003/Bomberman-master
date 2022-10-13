@@ -16,7 +16,7 @@ public class StageStartScene extends SubScene {
 
         var background = new Rectangle(SCENE_WIDTH, SCENE_HEIGHT, Color.color(0, 0, 0, 1));
 
-        var title = getUIFactoryService().newText("Stage " + geti("level"), Color.WHITE, 40);
+        var title = getUIFactoryService().newText("    Stage " + geti("level"), Color.WHITE, 80);
         title.setStroke(Color.WHITESMOKE);
         title.setStrokeWidth(1.5);
         title.setEffect(new Bloom(0.6));

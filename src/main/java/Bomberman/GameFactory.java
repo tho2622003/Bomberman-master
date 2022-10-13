@@ -28,7 +28,7 @@ public class GameFactory implements EntityFactory {
     @Spawns("background")
     public Entity newBackground(SpawnData data) {
         return entityBuilder()
-                .view(new Rectangle(GAME_WORLD_WIDTH, GAME_WORLD_HEIGHT, Color.rgb(0, 125, 0)))
+                .view(new Rectangle(GAME_WORLD_WIDTH, GAME_WORLD_HEIGHT, Color.rgb(125, 92, 100)))
                 .zIndex(-100)
                 .with(new IrremovableComponent())
                 .build();
@@ -78,7 +78,7 @@ public class GameFactory implements EntityFactory {
     @Spawns("player")
     public Entity newPlayer(SpawnData data) {
         PhysicsComponent physics = new PhysicsComponent();
-        physics.setFixtureDef(new FixtureDef().friction(0).density(0.1f));
+        physics.setFixtureDef(new FixtureDef().friction(1).density(1));
         BodyDef bd = new BodyDef();
         bd.setFixedRotation(true);
         bd.setType(BodyType.DYNAMIC);
